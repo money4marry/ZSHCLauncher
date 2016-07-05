@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activities.MainActivity">
+
+    <!--这是显示数字时钟-->
+
+
+    <TextClock
+        android:id="@+id/tc_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="70dp"
+        android:format24Hour="h:mm aa"
+        android:textColor="#000"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tc_clock"
+        android:layout_below="@id/tc_clock"
+        android:text="Hello World!"
+        android:textColor="#000"
+        android:textSize="27sp" />
+
+    <ImageView
+        android:id="@+id/iv_battery_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp" />
+    <!-- 显示电量数字-->
+    <TextView
+        android:id="@+id/tv_battery_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_battery_status"
+        android:layout_marginRight="2dp"
+        android:layout_toLeftOf="@id/iv_battery_status"
+        android:text="battery"
+        android:textColor="#000"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:id="@+id/iv_wifi_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_battery_status"
+        android:layout_marginRight="7dp"
+        android:layout_toLeftOf="@id/tv_battery_level" />
+    <!-- 集腾互动课堂入口 -->
+    <TextView
+        android:id="@+id/ic_getenclass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/ic_getenclass"
+        android:text="     互动课堂"
+        android:textSize="30sp" />
+    <!-- 优课入口 -->
+    <TextView
+        android:id="@+id/ic_uclass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="120dp"
+        android:layout_marginRight="200dp"
+        android:drawableTop="@drawable/ic_uclass"
+        android:text="优课学生端"
+        android:textSize="15sp" />
+    <!-- 打开相机 -->
+    <TextView
+        android:id="@+id/ic_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ic_uclass"
+        android:layout_alignStart="@+id/ic_uclass"
+        android:drawableTop="@drawable/ic_camera"
+        android:gravity="center"
+        android:text="相机"
+        android:textSize="15sp"
+        android:layout_marginBottom="5dp"/>
+
+    <!-- 公司信息 -->
+    <TextView
+        android:id="@+id/company_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/company_info" />
+
+    <!-- 版本号信息 -->
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/company_info"
+        android:layout_alignLeft="@id/company_info"
+        android:text="hhh" />
+    <!-- 退出按钮  - 暂时隐藏-->
+    <TextView
+        android:id="@+id/tv_signout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="30dp"
+        android:drawableTop="@drawable/ic_sign_out"
+        android:visibility="gone" />
+    <!-- 设置按钮 - 暂时隐藏-->
+    <TextView
+        android:id="@+id/tv_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_signout"
+        android:layout_alignRight="@id/tv_signout"
+        android:drawableTop="@drawable/ic_setting"
+        android:visibility="gone" />
+
+</RelativeLayout>
